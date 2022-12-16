@@ -30,6 +30,15 @@ typedef struct binary_tree_s heap_t;
 
 void binary_tree_print(const binary_tree_t *tree);
 
+typedef struct levelorder_queue_s
+{
+	binary_tree_t *node;
+	struct levelorder_queue_s *next;
+} levelorder_queue_t;
+
+/* Printing helper function */
+void binary_tree_print(const binary_tree_t *);
+
 /* MANDATORY */
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
